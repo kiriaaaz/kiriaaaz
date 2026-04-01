@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Variables ──────────────────────────────────────── */
+:root {
+  --white:     #f5f3ef;
+  --white-dim: rgba(245, 243, 239, 0.5);
+  --overlay:   rgba(0, 0, 0, 0.42);
+}
+
+/* ─── Reset & base ───────────────────────────────────────── */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background: #080808;
+  color: var(--white);
+  /* Custom cursor — enabled via JS in the component */
+  cursor: none;
+}
+
+/* ─── Custom cursor ──────────────────────────────────────── */
+.custom-cursor {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--white);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    opacity 0.2s ease;
+  mix-blend-mode: difference;
+}
+.custom-cursor.hovering {
+  width: 36px;
+  height: 36px;
+  opacity: 0.55;
+}
+
+/* ─── Video background ───────────────────────────────────── */
+.video-wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.video-bg {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay);
+  /* Subtle vignette for depth */
+  box-shadow: inset 0 0 140px rgba(0, 0, 0, 0.5);
+}
+
+/* ─── Decorative hairlines ───────────────────────────────── */
+.hairline-top,
+.hairline-bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(245, 243, 239, 0.15),
+    transparent
+  );
+  z-index: 2;
+}
+.hairline-top    { top: 0; }
+.hairline-bottom { bottom: 0; }
