@@ -54,7 +54,7 @@ export default function Header() {
           onClick={() => setMenuOpen(!menuOpen)}
           style={{
             background: "none", border: "none", cursor: "none",
-            color: "#f5f3ef", padding: "0.3rem",
+            color: "#f5f3ef", 
             padding: "0.6rem 0.3rem 0 0",  // ← augmente le 0.6rem jusqu'à ce que ce soit aligné
             display: "flex", flexDirection: "column", gap: "5px",
           }}

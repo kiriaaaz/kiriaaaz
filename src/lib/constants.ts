@@ -7,7 +7,7 @@
 export const INSTAGRAM_URL = "https://www.instagram.com/kiriaz__3?igsh=c3Uyc3ExdnB3dTlh&utm_source=qr";
 
 /** Path to the background video (place the file in /public) */
-export const BG_VIDEO_SRC = "/vdbckgrd.mov";
+export const BG_VIDEO_SRC = "https://res.cloudinary.com/dmnjnkhnu/video/upload/v1775144059/vdbckgrd_zr9xc4.mov";
 
 /** Artist name displayed as the hero title */
 export const ARTIST_NAME = "KIRIAAAZ";

@@ -18,14 +18,14 @@ const cards = [
   {
     label: "Danse",
     href: "/danse",
-    photo: "/photo-danse.jpg",
-    video: "/video-danse.mov",
+    photo: "https://res.cloudinary.com/dmnjnkhnu/image/upload/v1775130700/photo-danse_qxkueq.jpg",
+    video: "https://res.cloudinary.com/dmnjnkhnu/video/upload/v1775144055/video-danse_b0rxmg.mov",
   },
   {
     label: "Modeling",
     href: "/modeling",
-    photo: "/photo-modeling.jpeg",
-    video: "/video-modeling.mov",
+    photo: "https://res.cloudinary.com/dmnjnkhnu/image/upload/v1775144007/photo-modeling_mso5ya.jpg",
+    video: "https://res.cloudinary.com/dmnjnkhnu/video/upload/v1775144050/video-modeling_ztt3kx.mov",
   },
 ];
 

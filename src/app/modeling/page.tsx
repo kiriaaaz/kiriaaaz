@@ -6,11 +6,11 @@ import { useState } from "react";
 
 const photos = [
   { src: "/modeling-nike.jpeg",    alt: "Nike Casual Fit"           },
-  { src: "/modeling-cuir1.jpeg",   alt: "Studio cuir foulard"       },
-  { src: "/modeling-paco1.png",    alt: "Paco Rabanne Raw Instinct" },
+  { src: "https://res.cloudinary.com/dmnjnkhnu/image/upload/v1775130976/modeling-cuir1_uuub0b.jpg",   alt: "Studio cuir foulard"       },
+  { src: "https://res.cloudinary.com/dmnjnkhnu/image/upload/v1775130724/modeling-paco2_lgbtff.png",    alt: "Paco Rabanne Raw Instinct" },
   { src: "/modeling-adidas1.jpeg", alt: "Adidas editorial"          },
-  { src: "/modeling-cuir2.jpeg",   alt: "Studio cuir fond sombre"   },
-  { src: "/modeling-paco2.png",    alt: "Paco Rabanne SS26"         },
+  { src: "https://res.cloudinary.com/dmnjnkhnu/image/upload/v1775144114/modeling-cuir2_hftapn.jpg",   alt: "Studio cuir fond sombre"   },
+  { src: "https://res.cloudinary.com/dmnjnkhnu/image/upload/v1775130723/modeling-paco1_lugonf.png",    alt: "Paco Rabanne SS26"         },
   { src: "/modeling-adidas2.jpeg", alt: "Adidas assis"              },
 ];
 

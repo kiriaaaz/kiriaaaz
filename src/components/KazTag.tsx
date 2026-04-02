@@ -41,7 +41,7 @@ export default function KazTag() {
         }}
       >
         <Image
-          src="/logo.png"
+          src="https://res.cloudinary.com/dmnjnkhnu/image/upload/v1775130680/Logo_ljscsf.png"
           alt="KAZ logo"
           width={80}
           height={80}
