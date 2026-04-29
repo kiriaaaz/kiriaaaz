@@ -30,11 +30,35 @@ function Lightbox({ photo, onClose }: { photo: { src: string; alt: string }; onC
       <motion.div
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
         onClick={onClose}
-        style={{ position: "fixed", inset: 0, zIndex: 200, background: "rgba(0,0,0,0.92)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "none" }}
+        style={{
+          position: "fixed", inset: 0, zIndex: 200,
+          background: "rgba(0,0,0,0.92)",
+          display: "flex", alignItems: "center", justifyContent: "center",
+          cursor: "none",
+        }}
       >
-        <button onClick={onClose} style={{ position: "absolute", top: "2rem", right: "2.5rem", background: "none", border: "none", color: "#f5f3ef", fontFamily: "var(--font-montserrat)", fontSize: "0.7rem", letterSpacing: "0.2em", textTransform: "uppercase", cursor: "none", opacity: 0.6 }}>
+        {/* Bouton fermer — fonctionne sur mobile */}
+        <button
+          onClick={(e) => { e.stopPropagation(); onClose(); }}
+          style={{
+            position: "absolute", top: "1.2rem", right: "1.2rem",
+            background: "rgba(255,255,255,0.1)",
+            border: "1px solid rgba(245,243,239,0.3)",
+            color: "#f5f3ef",
+            fontFamily: "var(--font-montserrat)",
+            fontSize: "0.7rem",
+            letterSpacing: "0.2em",
+            textTransform: "uppercase",
+            padding: "0.8rem 1.2rem",
+            zIndex: 210,
+            opacity: 1,
+            touchAction: "manipulation",
+            WebkitTapHighlightColor: "transparent",
+          }}
+        >
           FERMER ✕
         </button>
+
         <motion.div
           initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
@@ -81,7 +105,6 @@ function PhotoCard({ src, alt, layoutItem, index, onClick }: {
         style={{
           objectFit: "cover",
           objectPosition: "top center",
-          // Grisé au survol
           filter: hovered ? "brightness(0.5)" : "brightness(1)",
           transition: "filter 0.4s ease",
         }}

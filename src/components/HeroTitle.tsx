@@ -4,7 +4,7 @@ import { motion, useAnimationControls } from "framer-motion";
 import { useEffect } from "react";
 import { ARTIST_NAME } from "@/lib/constants";
 
-const HOLD_DURATION = 1500;
+const HOLD_DURATION = 800;
 
 export default function HeroTitle() {
   const controls = useAnimationControls();

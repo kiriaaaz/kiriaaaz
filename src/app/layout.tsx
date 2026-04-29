@@ -23,6 +23,9 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "KIRIAAAZ",
   description: "Portfolio artistique — Danse & Modeling",
+  verification: {
+    google: "BXgeSB_2M6dtqUZhGCUCKKhUeBURwS020Q65PYLr4HE", // ← juste le code, pas la balise HTML
+  },
 };
 
 export default function RootLayout({
@@ -33,29 +36,19 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${anton.variable} ${montserrat.variable}`}>
       <body>
-        {/* Curseur custom */}
         <CustomCursor />
-
-        {/* KAZ tag clignotant en haut au centre */}
         <KazTag />
-
-        {/* KIRIAAAZ — statique sur les autres pages, absent sur l'accueil */}
         <LogoKiriaaaz />
-
-        {/* Header (Instagram + Contact me) fixe en haut à droite */}
         <div
           style={{
             position: "fixed",
-            top: 0,
-            left: 0,
-            right: 0,
+            top: 0, left: 0, right: 0,
             zIndex: 20,
-            padding: "clamp(1.2rem, 3vw, 2.5rem) clamp(1.4rem, 4vw, 3.5rem)"
+            padding: "clamp(1.2rem, 3vw, 2.5rem) clamp(1.4rem, 4vw, 3.5rem)",
           }}
         >
           <Header />
         </div>
-
         {children}
       </body>
     </html>
